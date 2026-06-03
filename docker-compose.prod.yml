@@ -83,13 +83,13 @@ services:
     env_file:
       - .env.prod
     networks:
-      - postgis
+      - joamona-dj-api_postgis
 
     #to ckeck if postgres is already ready. This service
     #will not start up to the posgis service is ready
-    depends_on:
-      postgis:
-        condition: service_healthy
+    #depends_on:
+     # postgis:
+     #   condition: service_healthy
 networks:
    postgis:
       driver: bridge

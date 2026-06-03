@@ -198,9 +198,9 @@ USE_TZ = True
 
 #Archivos estáticos para el sitio de administración de Django
 #1. Dónde se crean con el comando python manage.py collectstatic
-STATIC_ROOT= os.getenv('STATIC_ROOT','static_root')
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 #2. Dónde se encuentran en la web
-STATIC_URL = os.getenv('STATIC_URL','static')
+STATIC_URL = '/static/'
 
 
 # Default primary key field type
